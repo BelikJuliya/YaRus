@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/character_flow"
+    app:startDestination="@id/characterListFragment">
+
+    <fragment
+        android:id="@+id/characterListFragment"
+        android:name="android.example.yarus.view.presentation.characterFlow.list.CharacterListFragment"
+        android:label="CharacterListFragment" >
+        <action
+            android:id="@+id/action_characterListFragment_to_characterDetailsFragment"
+            app:destination="@id/characterDetailsFragment">
+            <argument android:name="characterId" app:argType="string"/>
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/characterDetailsFragment"
+        android:name="android.example.yarus.view.presentation.characterFlow.details.CharacterDetailsFragment"
+        android:label="CharacterDetailsFragment" >
+        <argument android:name="characterId" app:argType="string"/>
+    </fragment>
+</navigation>

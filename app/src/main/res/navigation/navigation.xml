@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation.xml"
+    app:startDestination="@id/heroesFragment">
+
+    <fragment
+        android:id="@+id/locationFragment"
+        android:name="android.example.yarus.view.presentation.locationFlow.LocationFragment"
+        android:label="fragment_location"
+        tools:layout="@layout/fragment_location" />
+    <fragment
+        android:id="@+id/heroesFragment"
+        android:name="android.example.yarus.view.presentation.characterFlow.HeroesFragment"
+        android:label="fragment_heroes"
+        tools:layout="@layout/fragment_heroes" >
+        <action
+            android:id="@+id/action_heroesFragment_to_episodesFragment"
+            app:destination="@id/episodesFragment" />
+        <action
+            android:id="@+id/action_heroesFragment_to_locationFragment"
+            app:destination="@id/locationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/episodesFragment"
+        android:name="android.example.yarus.view.presentation.episodesFlow.EpisodesFragment"
+        android:label="fragment_blank"
+        tools:layout="@layout/fragment_episodes" />
+    <include app:graph="@navigation/character_flow" />
+</navigation>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/locations"
+        android:enabled="true"
+        android:icon="@drawable/icon_bottom"
+        android:title="@string/text_label_1"/>
+    <item
+        android:id="@+id/heroes"
+        android:enabled="true"
+        android:icon="@drawable/icon_bottom"
+        android:title="@string/text_label_2"/>
+    <item
+        android:id="@+id/episodes"
+        android:enabled="true"
+        android:icon="@drawable/icon_bottom"
+        android:title="@string/text_label_2"/>
+</menu>
